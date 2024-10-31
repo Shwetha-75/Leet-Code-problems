@@ -5,7 +5,8 @@ Medium
 Topics
 Companies
 Hint
-You are given an integer array nums. A subsequence of nums is called a square streak if:
+You are given an integer array nums. A subsequence of nums is called a square streak 
+if:
 
 The length of the subsequence is at least 2, and
 after sorting the subsequence, each element (except the first element) is the square of the previous number.

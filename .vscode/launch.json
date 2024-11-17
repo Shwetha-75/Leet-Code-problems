@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PrefixSumSubArray",
+            "request": "launch",
+            "mainClass": "PrefixSumSubArray",
+            "projectName": "ProblemSolution2_95692597"
+        },
+        {
+            "type": "java",
             "name": "StringCompression",
             "request": "launch",
             "mainClass": "StringCompression",

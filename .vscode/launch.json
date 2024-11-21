@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SmallestInteger",
+            "request": "launch",
+            "mainClass": "SmallestInteger",
+            "projectName": "ProblemSolution2_95692597"
+        },
+        {
+            "type": "java",
             "name": "DefuseTheBomb",
             "request": "launch",
             "mainClass": "DefuseTheBomb",

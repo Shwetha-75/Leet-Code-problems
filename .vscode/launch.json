@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CheckIfStringIsPrefixOfArray",
+            "request": "launch",
+            "mainClass": "CheckIfStringIsPrefixOfArray",
+            "projectName": "ProblemSolution2_95692597"
+        },
+        {
+            "type": "java",
             "name": "SmallestInteger",
             "request": "launch",
             "mainClass": "SmallestInteger",

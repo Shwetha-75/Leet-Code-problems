@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FinalArrayStateAfterKMultiplicationOperationsI",
+            "request": "launch",
+            "mainClass": "FinalArrayStateAfterKMultiplicationOperationsI",
+            "projectName": "ProblemSolution2_95692597"
+        },
+        {
+            "type": "java",
+            "name": "CalculateDigitSumOfAString",
+            "request": "launch",
+            "mainClass": "CalculateDigitSumOfAString",
+            "projectName": "ProblemSolution2_95692597"
+        },
+        {
+            "type": "java",
             "name": "CheckIfStringIsPrefixOfArray",
             "request": "launch",
             "mainClass": "CheckIfStringIsPrefixOfArray",

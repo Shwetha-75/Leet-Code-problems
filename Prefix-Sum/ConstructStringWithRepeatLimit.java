@@ -51,7 +51,7 @@ class ConstructStringWithRepeatLimit{
         {
             if(freq[current_index]>0){
                 result+=calculate((char)(current_index+'a')+"", Math.min(repeatLimit,freq[current_index]));
-                freq[current_index]-=repeatLimit;
+                freq[current_index]-=repeatLimit; 
                 if(freq[current_index]>0){
                     if(current_index-1>=0){
                         int small_index=current_index-1;

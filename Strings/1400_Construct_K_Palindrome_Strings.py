@@ -43,4 +43,5 @@ class TestApp:
         assert Solution().canConstruct("leetcode", 3)==False 
     def testing_case_three(self):
         assert Solution().canConstruct("true",4)==True 
-    
+    def testing_case_four(self):
+        assert Solution().canConstruct("cr",7)==False 

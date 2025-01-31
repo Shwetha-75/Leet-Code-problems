@@ -45,24 +45,7 @@ Discussion (36)
 
 '''
 
-class Node:
-    def __init__(self,val=0):
-        self.val=val 
-        self.next=None 
-    
-class LinkedList:
-    def __init__(self):
-        self.node=None 
-    def insert(self,val:int)->None:
-        if not self.node: 
-            node=Node(val)
-            self.node=node 
-        else:
-            temp=self.node
-            while temp.next:
-                temp=temp.next 
-            node=Node(val)
-            temp.next=node 
+from LinkedList import Node
              
 class Solution:
     def getDecimalValue(self, head:Node) -> int:

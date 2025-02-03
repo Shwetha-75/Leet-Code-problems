@@ -23,17 +23,23 @@ Constraints:
 
 '''
 
+
+# Modifying the array
 class Solution:
     def moveZeroes(self, nums: list[int]) -> None:
-        # count=0
-        # while nums and 0 in nums: 
-        #       nums.remove(0)
-        #       count+=1
+        count=0
+        while nums and 0 in nums: 
+              nums.remove(0)
+              count+=1
         
-        # for i in range(count):
-        #     nums.append(0)
-        # return nums
-        
+        for i in range(count):
+            nums.append(0)
+        return nums
+
+
+# Using Two pointers approach 
+class Solution:
+    def moveZeroes(self, nums: list[int]) -> None:    
         non_zero,zero,n=0,0,len(nums)
         while non_zero<n:
               if nums[non_zero]!=0:
@@ -42,12 +48,7 @@ class Solution:
                   zero+=1 
               non_zero+=1 
         
-        
-        pass
-    
-        
-        
-         
+
 
 
 class TestApp:

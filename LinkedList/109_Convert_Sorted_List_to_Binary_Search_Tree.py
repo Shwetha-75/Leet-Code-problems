@@ -24,7 +24,7 @@ The number of nodes in head is in the range [0, 2 * 104].
 -105 <= Node.val <= 105
 '''
 
-from TreeNode import Node 
+from Stack.TreeNode import Node 
 from LinkedListNode import Root as ListNode 
 class Solution:
     def __init__(self):

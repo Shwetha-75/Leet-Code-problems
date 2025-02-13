@@ -30,7 +30,7 @@ Follow up: Can you flatten the tree in-place (with O(1) extra space)?
 
 '''
 
-from TreeNode import * 
+from Stack.TreeNode import * 
 
 # Approach 1 : Using Recursion Time Complexity O(n) Space Complexity O(n)
         # pseudo code 
@@ -84,21 +84,8 @@ class Solution:
 #        assign current left to hold None 
 
 
-class Solution:
-    def flatten(self, root:Node) -> None:
-        stack=[]
-        stack.append(root)
-        while stack:
-              current=stack.pop(0)
-              if current.left:
-                  stack.append(current.left)
-              if current.right:
-                  stack.append(current.right)
-              if stack:
-                  current.right=stack[-1]
-              current.left=None 
-        
-# Approach 3 : Using two pointers 
+
+# Approach 2 : Using two pointers 
 class Solution:
     def flatten(self, root:Node) -> None:
         current=root 

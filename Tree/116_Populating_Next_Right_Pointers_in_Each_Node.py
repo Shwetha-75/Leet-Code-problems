@@ -38,7 +38,7 @@ The recursive approach is fine. You may assume implicit stack space does not cou
 
 '''
 
-from TreeNode import Node 
+from Stack.TreeNode import Node 
 
 
 

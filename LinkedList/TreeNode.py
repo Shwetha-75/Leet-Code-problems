@@ -1,6 +1,6 @@
 class Node:
     def __init__(self,val=0):
-        self.val=0
+        self.val=val
         self.left=None 
         self.right=None 
         
@@ -18,12 +18,13 @@ class BinaryTree:
             return self 
         temp=self.root 
         while True:
+            print("Hello")
             if value<temp.val:
                 if not temp.left:
                     node=Node(value)
                     temp.left=node 
                 temp=temp.left 
-            elif value>temp.right:
+            elif value>temp.val:
                 if not temp.right:
                     node=Node(value)
                     temp.right=node 

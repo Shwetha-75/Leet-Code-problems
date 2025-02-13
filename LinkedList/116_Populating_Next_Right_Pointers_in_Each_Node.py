@@ -37,7 +37,7 @@ The recursive approach is fine. You may assume implicit stack space does not cou
 
 '''
 
-from TreeNode import *
+from Stack.TreeNode import *
 
 
 

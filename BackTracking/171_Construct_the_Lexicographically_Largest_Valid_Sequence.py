@@ -39,7 +39,7 @@ class Solution:
             for i in sorted(range(1,n+1),reverse=True):
                 if i in used: continue 
                 next=length_seq-1-i
-                if next>=length_seq or seq[index]!=0: continue 
+                if next>=length_seq or seq[next]!=0: continue 
                 seq[index]=seq[next]=i
                 used.add(i)
                 if helper(index+1):

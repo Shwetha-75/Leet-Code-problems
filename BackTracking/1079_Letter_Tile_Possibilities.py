@@ -51,42 +51,59 @@ Discussion (64)
 
 '''
 
-class Solution:
-    def numTilePossibilities(self, tiles: str) -> int:
-        # Calculating the subset 
-        result=[]
-        def generateSubsetByVaryingLength(string,subset:list,index:int):
-            if index==len(string):
-                if "".join(subset) not in result and subset:
-                    result.append("".join(subset))
-                return 
+# class Solution:
+#     def numTilePossibilities(self, tiles: str) -> int:
+#         # Calculating the subset 
+#         result=[]
+#         def generateSubsetByVaryingLength(string,subset:list,index:int):
+#             if index==len(string):
+#                 if "".join(subset) not in result and subset:
+#                     result.append("".join(subset))
+#                 return 
             
-            generateSubsetByVaryingLength(string,subset,index+1)
+#             generateSubsetByVaryingLength(string,subset,index+1)
             
-            subset.append(string[index])
-            generateSubsetByVaryingLength(string,subset,index+1)
-            subset.pop()
+#             subset.append(string[index])
+#             generateSubsetByVaryingLength(string,subset,index+1)
+#             subset.pop()
         
-        generateSubsetByVaryingLength(tiles,[],0)
-        print(result)
-        res=result[::]
-        def permutation(string:list,i:int):
-            if i==len(string)-1:
-                temp="".join(string)
-                if temp not in res:
-                    res.append(temp)
-                return
-            for j in range(i,len(string)):
-                # swap
-                string[i],string[j]=string[j],string[i]
-                permutation(string,i+1)
-                string[i],string[j]=string[j],string[i]
+#         generateSubsetByVaryingLength(tiles,[],0)
+#         print(result)
+#         res=result[::]
+#         def permutation(string:list,i:int):
+#             if i==len(string)-1:
+#                 temp="".join(string)
+#                 if temp not in res:
+#                     res.append(temp)
+#                 return
+#             for j in range(i,len(string)):
+#                 # swap
+#                 string[i],string[j]=string[j],string[i]
+#                 permutation(string,i+1)
+#                 string[i],string[j]=string[j],string[i]
             
-        for i in result:
-            if len(i)>1:
-                permutation(list(i),0)
+#         for i in result:
+#             if len(i)>1:
+#                 permutation(list(i),0)
             
-        return len(res)
+#         return len(res)
+from collections import Counter
+class Solution:
+        def numTilePossibilities(self, tiles: str) -> int:
+        #   Using Depth First Search (DFS)
+         
+    
+           return self.dfsAlgorithm(dict(Counter(tiles)))
+        def dfsAlgorithm(self,hash_map):
+            combo=0 
+            for tile,count in hash_map.items():
+                if count>0:
+                    combo+=1 
+                    hash_map[tile]-=1
+                    combo+=self.dfsAlgorithm(hash_map)
+                    hash_map[tile]+=1 
+            return combo
+            
 class TestApp:
     def testing_case_one(self):
         assert Solution().numTilePossibilities('AAB')==8 

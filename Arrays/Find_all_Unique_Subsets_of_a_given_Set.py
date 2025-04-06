@@ -20,5 +20,6 @@ class Solution:
 class TestApp:
     def testing_case_one(self):
         assert Solution().findSubset([1,5,6])==[[6],[5],[5,6],[1],[1,6],[1,5],[1,5,6]]
-    
+    def testing_case_two(self):
+        assert Solution().findSubset()
         
